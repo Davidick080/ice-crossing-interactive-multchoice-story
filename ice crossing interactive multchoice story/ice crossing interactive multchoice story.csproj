@@ -104,5 +104,26 @@
   <ItemGroup>
     <None Include="Resources\snakebanadana.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\metal gear box.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rpg.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hookshot.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gunboats.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ammution.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nothing.jfif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
