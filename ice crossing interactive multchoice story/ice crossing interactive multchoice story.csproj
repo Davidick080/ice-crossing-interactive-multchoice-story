@@ -125,5 +125,17 @@
   <ItemGroup>
     <None Include="Resources\nothing.jfif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mario leaf.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drone.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win remote.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solder rocket.jfif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

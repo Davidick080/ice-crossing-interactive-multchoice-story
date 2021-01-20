@@ -38,29 +38,30 @@ namespace ice_crossing_interactive_multchoice_story
             this.bLabel = new System.Windows.Forms.Label();
             this.nLabel = new System.Windows.Forms.Label();
             this.mLabel = new System.Windows.Forms.Label();
+            this.itemPopUp = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // options1
             // 
             this.options1.BackColor = System.Drawing.Color.Transparent;
             this.options1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.options1.ForeColor = System.Drawing.Color.Purple;
+            this.options1.ForeColor = System.Drawing.Color.Black;
             this.options1.Location = new System.Drawing.Point(12, 533);
             this.options1.Name = "options1";
             this.options1.Size = new System.Drawing.Size(268, 163);
             this.options1.TabIndex = 0;
-            this.options1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.options1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // option2
             // 
             this.option2.BackColor = System.Drawing.Color.Transparent;
             this.option2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.option2.ForeColor = System.Drawing.Color.LawnGreen;
+            this.option2.ForeColor = System.Drawing.Color.Black;
             this.option2.Location = new System.Drawing.Point(429, 510);
             this.option2.Name = "option2";
             this.option2.Size = new System.Drawing.Size(248, 184);
             this.option2.TabIndex = 1;
-            this.option2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.option2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // option3
             // 
@@ -71,7 +72,7 @@ namespace ice_crossing_interactive_multchoice_story
             this.option3.Name = "option3";
             this.option3.Size = new System.Drawing.Size(216, 174);
             this.option3.TabIndex = 2;
-            this.option3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.option3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // option4
             // 
@@ -82,7 +83,7 @@ namespace ice_crossing_interactive_multchoice_story
             this.option4.Name = "option4";
             this.option4.Size = new System.Drawing.Size(228, 167);
             this.option4.TabIndex = 3;
-            this.option4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.option4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // storyText
             // 
@@ -134,6 +135,16 @@ namespace ice_crossing_interactive_multchoice_story
             this.mLabel.TabIndex = 8;
             this.mLabel.Text = "Press m for this option";
             // 
+            // itemPopUp
+            // 
+            this.itemPopUp.BackColor = System.Drawing.Color.Transparent;
+            this.itemPopUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemPopUp.Location = new System.Drawing.Point(475, 138);
+            this.itemPopUp.Name = "itemPopUp";
+            this.itemPopUp.Size = new System.Drawing.Size(577, 341);
+            this.itemPopUp.TabIndex = 9;
+            this.itemPopUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // backGround
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,6 +152,7 @@ namespace ice_crossing_interactive_multchoice_story
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::ice_crossing_interactive_multchoice_story.Properties.Resources.Frozen_lake;
             this.ClientSize = new System.Drawing.Size(1455, 697);
+            this.Controls.Add(this.itemPopUp);
             this.Controls.Add(this.mLabel);
             this.Controls.Add(this.nLabel);
             this.Controls.Add(this.bLabel);
@@ -151,7 +163,7 @@ namespace ice_crossing_interactive_multchoice_story
             this.Controls.Add(this.options1);
             this.Controls.Add(this.storyText);
             this.Cursor = System.Windows.Forms.Cursors.No;
-            this.ForeColor = System.Drawing.Color.Transparent;
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "backGround";
             this.Text = "backGround";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -170,6 +182,7 @@ namespace ice_crossing_interactive_multchoice_story
         private System.Windows.Forms.Label bLabel;
         private System.Windows.Forms.Label nLabel;
         private System.Windows.Forms.Label mLabel;
+        private System.Windows.Forms.Label itemPopUp;
     }
 }
 

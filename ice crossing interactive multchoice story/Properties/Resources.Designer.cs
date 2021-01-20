@@ -83,6 +83,16 @@ namespace ice_crossing_interactive_multchoice_story.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap drone {
+            get {
+                object obj = ResourceManager.GetObject("drone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Frozen_lake {
             get {
                 object obj = ResourceManager.GetObject("Frozen lake", resourceCulture);
@@ -126,6 +136,16 @@ namespace ice_crossing_interactive_multchoice_story.Properties {
         internal static System.Drawing.Bitmap mario_Kart {
             get {
                 object obj = ResourceManager.GetObject("mario Kart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mario_leaf {
+            get {
+                object obj = ResourceManager.GetObject("mario leaf", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +223,29 @@ namespace ice_crossing_interactive_multchoice_story.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap solder_rocket {
+            get {
+                object obj = ResourceManager.GetObject("solder rocket", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap teleportation_device {
             get {
                 object obj = ResourceManager.GetObject("teleportation device", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap win_remote {
+            get {
+                object obj = ResourceManager.GetObject("win remote", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
