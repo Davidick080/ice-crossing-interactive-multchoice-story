@@ -105,7 +105,6 @@ namespace ice_crossing_interactive_multchoice_story
             this.vLabel.Name = "vLabel";
             this.vLabel.Size = new System.Drawing.Size(289, 23);
             this.vLabel.TabIndex = 5;
-            this.vLabel.Text = "Press v for this option";
             this.vLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bLabel
@@ -115,7 +114,6 @@ namespace ice_crossing_interactive_multchoice_story
             this.bLabel.Name = "bLabel";
             this.bLabel.Size = new System.Drawing.Size(241, 23);
             this.bLabel.TabIndex = 6;
-            this.bLabel.Text = "press b for this option";
             this.bLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // nLabel
@@ -125,7 +123,6 @@ namespace ice_crossing_interactive_multchoice_story
             this.nLabel.Name = "nLabel";
             this.nLabel.Size = new System.Drawing.Size(277, 23);
             this.nLabel.TabIndex = 7;
-            this.nLabel.Text = "Press n for this option";
             this.nLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // mLabel
@@ -135,7 +132,6 @@ namespace ice_crossing_interactive_multchoice_story
             this.mLabel.Name = "mLabel";
             this.mLabel.Size = new System.Drawing.Size(161, 23);
             this.mLabel.TabIndex = 8;
-            this.mLabel.Text = "Press m for this option";
             // 
             // itemPopUp
             // 
@@ -145,6 +141,7 @@ namespace ice_crossing_interactive_multchoice_story
             this.itemPopUp.Name = "itemPopUp";
             this.itemPopUp.Size = new System.Drawing.Size(577, 341);
             this.itemPopUp.TabIndex = 9;
+            this.itemPopUp.Text = "Press space to start";
             this.itemPopUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gameCounter

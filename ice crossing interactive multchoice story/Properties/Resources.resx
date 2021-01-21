@@ -187,6 +187,9 @@
   <data name="RPG_Plus_Shrapnel_Mike_Koenig_802194222" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RPG_Plus_Shrapnel-Mike_Koenig-802194222.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Ta_Da_SoundBible_com_1884170640" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ta Da-SoundBible.com-1884170640.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Wind_Mark_DiAngelo_1940285615" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wind-Mark_DiAngelo-1940285615.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

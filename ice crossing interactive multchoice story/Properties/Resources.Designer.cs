@@ -267,6 +267,15 @@ namespace ice_crossing_interactive_multchoice_story.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Ta_Da_SoundBible_com_1884170640 {
+            get {
+                return ResourceManager.GetStream("Ta_Da_SoundBible_com_1884170640", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap teleportation_device {

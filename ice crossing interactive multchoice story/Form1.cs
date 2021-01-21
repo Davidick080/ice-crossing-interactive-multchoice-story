@@ -11,26 +11,13 @@ using System.Media;
 namespace ice_crossing_interactive_multchoice_story
 {//Code creator:David Dickson 
     // Start date of development:Jan 19,2021
-    //to do list (must fallow in order )
-    //-Get the rough code out 
-    //-Get the key binds to react & head to the right scene 
-    //- gather the remaning sounds & pictures(more pixel art if neccerary)
-    //-polish
-    //bugs list
-    //-extra things 
-    //-animations
-    //-keyboard counter 
-    //-
     public partial class backGround : Form
     {//scene count
         int scene = 0;
         //colors 
         SolidBrush redBrush = new SolidBrush(Color.Red);
         SolidBrush whiteBrush = new SolidBrush(Color.White);
-        Pen blackPen = new Pen(Color.Black);
-
-
-        //player character
+       //player character
         int personX = 0;
         int personY = 50;
         int personWidth = 30;
@@ -42,24 +29,25 @@ namespace ice_crossing_interactive_multchoice_story
         bool wDown = false;
         bool sDown = false;
         //sounds
-        SoundPlayer hailstorm = new SoundPlayer(Properties.Resources.Hailstorm_Mike_Koenig_447872762);
         SoundPlayer wind = new SoundPlayer(Properties.Resources.Wind_Mark_DiAngelo_1940285615);
-       // SoundPlayer wind = new SoundPlayer(Properties.Resources.Wind_Mark_DiAngelo_1940285615);
+        SoundPlayer taDa = new SoundPlayer(Properties.Resources.Ta_Da_SoundBible_com_1884170640);
+        SoundPlayer grenade = new SoundPlayer(Properties.Resources.Grenade_Explosion_SoundBible_com_2100581469);
 
         public backGround()
         {
             InitializeComponent();
-            storyText.Text = "you come to a frozen lake you have...";
-            options1.Image = Properties.Resources.rpg;
-            options1.Text = "A rpg";
-            option2.Image = Properties.Resources.hookshot;
-            option2.Text = "a grappleshot";
-            option3.Image = Properties.Resources.mushroom;
-            option3.Text = "mushroom";
-            option4.Image = Properties.Resources.metal_gear_box;
-            option4.Text = "A box";
+            
+          //  storyText.Text = "you come to a frozen lake you have...";
+         //  options1.Image = Properties.Resources.rpg;
+          //  options1.Text = "A rpg";
+          //  option2.Image = Properties.Resources.hookshot;
+          //  option2.Text = "a grappleshot";
+          //  option3.Image = Properties.Resources.mushroom;
+          //  option3.Text = "mushroom";
+          //  option4.Image = Properties.Resources.metal_gear_box;
+          //  option4.Text = "A box";
 
-      
+
 
         }
 
@@ -184,6 +172,14 @@ namespace ice_crossing_interactive_multchoice_story
                     scene = 0;
                 }
 
+            }
+            //this is for the space button
+            if(m.KeyCode==Keys.Space)
+            {
+             
+                {
+                    scene = 0;
+                }
             }
             //this is for the B keybind
             if (m.KeyCode == Keys.B)
@@ -317,10 +313,10 @@ namespace ice_crossing_interactive_multchoice_story
                     option3.Text = "mushroom";
                     option4.Image = Properties.Resources.metal_gear_box;
                     option4.Text = "A box";
-
                     option2.Visible = true;
                     option3.Visible = true;
                     option4.Visible = true;
+                    vLabel.Visible = true;
                     mLabel.Visible = true;
                     bLabel.Visible = true;
                     nLabel.Visible = true;
@@ -533,14 +529,14 @@ namespace ice_crossing_interactive_multchoice_story
                     vLabel.Text = "press m to restart";
                     nLabel.Visible = true;
                     nLabel.Text = "press n to exit game";
-                    
+
                     break;
                 case 20:
-               
-                    gameCounter.Enabled = false;
-                    //this.BackgroundImage =;
+                    taDa.Play();
+                    this.BackgroundImage = Properties.Resources.Frozen_lake;
                     storyText.Visible = true;
                     storyText.Text = "You win";
+                    vLabel.Visible = true;
                     vLabel.Text = "press m to restart";
                     nLabel.Visible = true;
                     nLabel.Text = "press n to exit game";
@@ -559,9 +555,6 @@ namespace ice_crossing_interactive_multchoice_story
                     this.BackColor = Color.Blue;
                     gameCounter.Enabled = true;
                     break;
-
-
-
             }
         }
 
@@ -585,9 +578,10 @@ namespace ice_crossing_interactive_multchoice_story
             {
                 personX -= personSpeed;
             }
-            if(personX>1000)
+            if (personX > 1000)
             {
                 scene = 20;
+                gameCounter.Enabled = false;
             }
             Refresh();
         }
