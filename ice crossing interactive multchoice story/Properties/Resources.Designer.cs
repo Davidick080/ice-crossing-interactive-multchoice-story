@@ -101,12 +101,30 @@ namespace ice_crossing_interactive_multchoice_story.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Grenade_Explosion_SoundBible_com_2100581469 {
+            get {
+                return ResourceManager.GetStream("Grenade_Explosion_SoundBible_com_2100581469", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap gunboats {
             get {
                 object obj = ResourceManager.GetObject("gunboats", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Hailstorm_Mike_Koenig_447872762 {
+            get {
+                return ResourceManager.GetStream("Hailstorm_Mike_Koenig_447872762", resourceCulture);
             }
         }
         
@@ -181,6 +199,15 @@ namespace ice_crossing_interactive_multchoice_story.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream PINGAS_Richard_89282878 {
+            get {
+                return ResourceManager.GetStream("PINGAS_Richard_89282878", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap red_balloons {
@@ -197,6 +224,15 @@ namespace ice_crossing_interactive_multchoice_story.Properties {
             get {
                 object obj = ResourceManager.GetObject("rpg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream RPG_Plus_Shrapnel_Mike_Koenig_802194222 {
+            get {
+                return ResourceManager.GetStream("RPG_Plus_Shrapnel_Mike_Koenig_802194222", resourceCulture);
             }
         }
         
@@ -247,6 +283,15 @@ namespace ice_crossing_interactive_multchoice_story.Properties {
             get {
                 object obj = ResourceManager.GetObject("win remote", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Wind_Mark_DiAngelo_1940285615 {
+            get {
+                return ResourceManager.GetStream("Wind_Mark_DiAngelo_1940285615", resourceCulture);
             }
         }
     }

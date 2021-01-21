@@ -41,6 +41,11 @@ namespace ice_crossing_interactive_multchoice_story
         bool aDown = false;
         bool wDown = false;
         bool sDown = false;
+        //sounds
+        SoundPlayer hailstorm = new SoundPlayer(Properties.Resources.Hailstorm_Mike_Koenig_447872762);
+        SoundPlayer wind = new SoundPlayer(Properties.Resources.Wind_Mark_DiAngelo_1940285615);
+       // SoundPlayer wind = new SoundPlayer(Properties.Resources.Wind_Mark_DiAngelo_1940285615);
+
         public backGround()
         {
             InitializeComponent();
@@ -53,6 +58,8 @@ namespace ice_crossing_interactive_multchoice_story
             option3.Text = "mushroom";
             option4.Image = Properties.Resources.metal_gear_box;
             option4.Text = "A box";
+
+      
 
         }
 
@@ -299,6 +306,7 @@ namespace ice_crossing_interactive_multchoice_story
             {
 
                 case 0:  //start scene  
+                    wind.Stop();
                     storyText.Text = "You come to a lake you have...";
                     options1.Image = Properties.Resources.rpg;
                     options1.Text = "A rpg";
@@ -318,7 +326,7 @@ namespace ice_crossing_interactive_multchoice_story
                     nLabel.Visible = true;
                     break;
                 case 1:
-
+                    wind.Stop();
                     storyText.Text = "you also have...";
                     options1.Image = Properties.Resources.gunboats;
                     options1.Text = "";
@@ -519,14 +527,18 @@ namespace ice_crossing_interactive_multchoice_story
                     nLabel.Visible = false;
                     break;
                 case 19:
+                    itemPopUp.Image = null;
+                    wind.Play();
                     storyText.Text = "game over";
                     vLabel.Text = "press m to restart";
                     nLabel.Visible = true;
                     nLabel.Text = "press n to exit game";
-
+                    
                     break;
                 case 20:
+               
                     gameCounter.Enabled = false;
+                    //this.BackgroundImage =;
                     storyText.Visible = true;
                     storyText.Text = "You win";
                     vLabel.Text = "press m to restart";
@@ -556,6 +568,27 @@ namespace ice_crossing_interactive_multchoice_story
         private void gameCounter_Tick(object sender, EventArgs e)
         {
 
+            //move player 1
+            if (wDown == true && personY > 0)
+            {
+                personY -= personSpeed;
+            }
+            if (sDown == true && personY < 663)
+            {
+                personY += personSpeed;
+            }
+            if (dDown == true && personX < 1000)
+            {
+                personX += personSpeed;
+            }
+            if (aDown == true && personX > 0)
+            {
+                personX -= personSpeed;
+            }
+            if(personX>1000)
+            {
+                scene = 20;
+            }
             Refresh();
         }
 

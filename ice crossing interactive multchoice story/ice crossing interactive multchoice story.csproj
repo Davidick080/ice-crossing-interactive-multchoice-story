@@ -137,5 +137,20 @@
   <ItemGroup>
     <None Include="Resources\solder rocket.jfif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PINGAS-Richard-89282878.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RPG_Plus_Shrapnel-Mike_Koenig-802194222.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wind-Mark_DiAngelo-1940285615.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hailstorm-Mike_Koenig-447872762.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grenade Explosion-SoundBible.com-2100581469.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

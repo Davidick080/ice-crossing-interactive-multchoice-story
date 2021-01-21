@@ -175,4 +175,19 @@
   <data name="solder rocket" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\solder rocket.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Grenade_Explosion_SoundBible_com_2100581469" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Grenade Explosion-SoundBible.com-2100581469.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Hailstorm_Mike_Koenig_447872762" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hailstorm-Mike_Koenig-447872762.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="PINGAS_Richard_89282878" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PINGAS-Richard-89282878.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="RPG_Plus_Shrapnel_Mike_Koenig_802194222" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RPG_Plus_Shrapnel-Mike_Koenig-802194222.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Wind_Mark_DiAngelo_1940285615" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wind-Mark_DiAngelo-1940285615.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
