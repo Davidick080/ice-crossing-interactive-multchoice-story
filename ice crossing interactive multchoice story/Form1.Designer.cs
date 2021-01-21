@@ -29,6 +29,7 @@ namespace ice_crossing_interactive_multchoice_story
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.options1 = new System.Windows.Forms.Label();
             this.option2 = new System.Windows.Forms.Label();
             this.option3 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@ namespace ice_crossing_interactive_multchoice_story
             this.nLabel = new System.Windows.Forms.Label();
             this.mLabel = new System.Windows.Forms.Label();
             this.itemPopUp = new System.Windows.Forms.Label();
+            this.gameCounter = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // options1
@@ -145,6 +147,11 @@ namespace ice_crossing_interactive_multchoice_story
             this.itemPopUp.TabIndex = 9;
             this.itemPopUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // gameCounter
+            // 
+            this.gameCounter.Interval = 20;
+            this.gameCounter.Tick += new System.EventHandler(this.gameCounter_Tick);
+            // 
             // backGround
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,10 +170,13 @@ namespace ice_crossing_interactive_multchoice_story
             this.Controls.Add(this.options1);
             this.Controls.Add(this.storyText);
             this.Cursor = System.Windows.Forms.Cursors.No;
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "backGround";
             this.Text = "backGround";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.backGround_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.backGround_KeyUp);
             this.ResumeLayout(false);
 
         }
@@ -183,6 +193,7 @@ namespace ice_crossing_interactive_multchoice_story
         private System.Windows.Forms.Label nLabel;
         private System.Windows.Forms.Label mLabel;
         private System.Windows.Forms.Label itemPopUp;
+        private System.Windows.Forms.Timer gameCounter;
     }
 }
 

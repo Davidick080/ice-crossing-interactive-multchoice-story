@@ -24,7 +24,23 @@ namespace ice_crossing_interactive_multchoice_story
     public partial class backGround : Form
     {//scene count
         int scene = 0;
-        int keyboardPresses = 0;
+        //colors 
+        SolidBrush redBrush = new SolidBrush(Color.Red);
+        SolidBrush whiteBrush = new SolidBrush(Color.White);
+        Pen blackPen = new Pen(Color.Black);
+
+
+        //player character
+        int personX = 0;
+        int personY = 50;
+        int personWidth = 30;
+        int personHeight = 30;
+        int personSpeed = 13;
+        //when player has to move
+        bool dDown = false;
+        bool aDown = false;
+        bool wDown = false;
+        bool sDown = false;
         public backGround()
         {
             InitializeComponent();
@@ -39,10 +55,28 @@ namespace ice_crossing_interactive_multchoice_story
             option4.Text = "A box";
 
         }
+
         private void Form1_KeyDown(object sender, KeyEventArgs m)
         {
+            switch (m.KeyCode)
+            {
+                case Keys.W:
+                    wDown = true;
+                    break;
+                case Keys.S:
+                    sDown = true;
+                    break;
+                case Keys.A:
+                    aDown = true;
+                    break;
+                case Keys.D:
+                    dDown = true;
+                    break;
+            }
+
             //M keybind 
             if (m.KeyCode == Keys.M)
+
             {
                 //intro scene
                 if (scene == 0)
@@ -61,7 +95,7 @@ namespace ice_crossing_interactive_multchoice_story
 
                     scene = 12;
                 }
-           
+
 
                 else if (scene == 4)
                 {
@@ -105,12 +139,13 @@ namespace ice_crossing_interactive_multchoice_story
                 {
                     scene = 19;
                 }
-                //neccary keybind to be pressed to go to winning screen
+                //for transitioning to player face
                 else if (scene == 8)
                 {
 
-                    scene = 20;
+                    scene = 21;
                 }
+                //neccary keybind to be pressed to go to winning screen
                 else if (scene == 9)
                 {
                     scene = 20;
@@ -168,10 +203,10 @@ namespace ice_crossing_interactive_multchoice_story
                 {
 
                     scene = 14;
-                           
-          
+
+
                 }
-                
+
 
                 else if (scene == 4)
                 {
@@ -207,7 +242,7 @@ namespace ice_crossing_interactive_multchoice_story
                 else if (scene == 4)
                 {
 
-                    scene = 17;
+                    scene = 18;
                 }
                 //scenes that take to exit application 
                 else if (scene == 19)
@@ -247,7 +282,7 @@ namespace ice_crossing_interactive_multchoice_story
 
                     scene = 13;
                 }
-                else if(scene==4)
+                else if (scene == 4)
                 {
                     scene = 16;
                 }
@@ -267,13 +302,14 @@ namespace ice_crossing_interactive_multchoice_story
                     storyText.Text = "You come to a lake you have...";
                     options1.Image = Properties.Resources.rpg;
                     options1.Text = "A rpg";
+                    vLabel.Text = "press v for this option";
                     option2.Image = Properties.Resources.hookshot;
                     option2.Text = "a grappleshot";
                     option3.Image = Properties.Resources.mushroom;
                     option3.Text = "mushroom";
                     option4.Image = Properties.Resources.metal_gear_box;
                     option4.Text = "A box";
-                  
+
                     option2.Visible = true;
                     option3.Visible = true;
                     option4.Visible = true;
@@ -490,13 +526,66 @@ namespace ice_crossing_interactive_multchoice_story
 
                     break;
                 case 20:
-                    storyText.Text="You win";
+                    gameCounter.Enabled = false;
+                    storyText.Visible = true;
+                    storyText.Text = "You win";
                     vLabel.Text = "press m to restart";
                     nLabel.Visible = true;
                     nLabel.Text = "press n to exit game";
                     break;
+                case 21:
+                    options1.Image = null;
+                    option2.Visible = false;
+                    option3.Visible = false;
+                    option4.Visible = false;
+                    mLabel.Visible = false;
+                    bLabel.Visible = false;
+                    nLabel.Visible = false;
+                    vLabel.Visible = false;
+                    storyText.Visible = false;
+                    this.BackgroundImage = null;
+                    this.BackColor = Color.Blue;
+                    gameCounter.Enabled = true;
+                    break;
 
 
+
+            }
+        }
+
+        private void gameCounter_Tick(object sender, EventArgs e)
+        {
+
+            Refresh();
+        }
+
+        private void backGround_Paint(object sender, PaintEventArgs e)
+        {
+            if (scene == 21)
+            {
+                e.Graphics.FillRectangle(whiteBrush, 0, 0, 400, 1500);
+                e.Graphics.FillRectangle(whiteBrush, 1000, 000, 2000, 1500);
+                e.Graphics.FillEllipse(redBrush, personX, personY, personWidth, personHeight);
+
+            }
+        }
+
+        private void backGround_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.W:
+                    wDown = false;
+                    break;
+                case Keys.S:
+                    sDown = false;
+                    break;
+                case Keys.A:
+                    aDown = false;
+                    break;
+                case Keys.D:
+                    dDown = false;
+                    break;
             }
         }
     }
