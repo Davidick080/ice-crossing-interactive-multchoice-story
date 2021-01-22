@@ -139,7 +139,7 @@ namespace ice_crossing_interactive_multchoice_story
             this.itemPopUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemPopUp.Location = new System.Drawing.Point(475, 138);
             this.itemPopUp.Name = "itemPopUp";
-            this.itemPopUp.Size = new System.Drawing.Size(577, 341);
+            this.itemPopUp.Size = new System.Drawing.Size(577, 312);
             this.itemPopUp.TabIndex = 9;
             this.itemPopUp.Text = "Press space to start";
             this.itemPopUp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

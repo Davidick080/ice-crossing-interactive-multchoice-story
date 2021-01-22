@@ -11,6 +11,8 @@ using System.Media;
 namespace ice_crossing_interactive_multchoice_story
 {//Code creator:David Dickson 
     // Start date of development:Jan 19,2021
+    //end date of devlopment:Jan,22,2021
+    //This is a mulitchoice/interactive story game. The main goal is to get across a frozen.
     public partial class backGround : Form
     {//scene count
         int scene = 0;
@@ -37,18 +39,6 @@ namespace ice_crossing_interactive_multchoice_story
         {
             InitializeComponent();
             
-          //  storyText.Text = "you come to a frozen lake you have...";
-         //  options1.Image = Properties.Resources.rpg;
-          //  options1.Text = "A rpg";
-          //  option2.Image = Properties.Resources.hookshot;
-          //  option2.Text = "a grappleshot";
-          //  option3.Image = Properties.Resources.mushroom;
-          //  option3.Text = "mushroom";
-          //  option4.Image = Properties.Resources.metal_gear_box;
-          //  option4.Text = "A box";
-
-
-
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs m)
@@ -303,15 +293,19 @@ namespace ice_crossing_interactive_multchoice_story
 
                 case 0:  //start scene  
                     wind.Stop();
+                    itemPopUp.Text = "";
                     storyText.Text = "You come to a lake you have...";
                     options1.Image = Properties.Resources.rpg;
                     options1.Text = "A rpg";
                     vLabel.Text = "press v for this option";
                     option2.Image = Properties.Resources.hookshot;
+                    bLabel.Text = "press b for this option";
                     option2.Text = "a grappleshot";
                     option3.Image = Properties.Resources.mushroom;
                     option3.Text = "mushroom";
+                    nLabel.Text = "Press n for option";
                     option4.Image = Properties.Resources.metal_gear_box;
+                    mLabel.Text = "Press m for this option";
                     option4.Text = "A box";
                     option2.Visible = true;
                     option3.Visible = true;
@@ -320,6 +314,8 @@ namespace ice_crossing_interactive_multchoice_story
                     mLabel.Visible = true;
                     bLabel.Visible = true;
                     nLabel.Visible = true;
+                    personX = 0;
+                    personY = 50;
                     break;
                 case 1:
                     wind.Stop();
@@ -361,14 +357,17 @@ namespace ice_crossing_interactive_multchoice_story
                     options1.Text = "a bandana";
                     option2.Image = Properties.Resources.drone;
                     option2.Text = "a drone";
+                    nLabel.Visible = true;
                     option3.Image = Properties.Resources.win_remote;
                     option3.Text = "Cheats mode";
                     option4.Visible = false;
                     mLabel.Visible = false;
+               
                     break;
                 case 5:
                     storyText.Text = "as you cross the ice with a pair of steel towed boats. The ice begins to shatter and you fall though.";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -381,6 +380,7 @@ namespace ice_crossing_interactive_multchoice_story
                     itemPopUp.Image = Properties.Resources.solder_rocket;
                     storyText.Text = "As you look at the how to rocket jump page. You accidentally drop the rpg & it explodes.";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -414,6 +414,7 @@ namespace ice_crossing_interactive_multchoice_story
                 case 9:
                     storyText.Text = "congralations you found hidden ending";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -426,6 +427,7 @@ namespace ice_crossing_interactive_multchoice_story
                     storyText.Text = "You aim the grappleshot at a tree across the frozen lake & you make it across. You also drop the green hat halfway between the frozen lake.";
                     vLabel.Text = "press m to continue";
                     options1.Image = null;
+                    options1.Text = "";
                     option2.Visible = false;
                     option3.Visible = false;
                     option4.Visible = false;
@@ -437,6 +439,7 @@ namespace ice_crossing_interactive_multchoice_story
                     storyText.Text = " As you finished blowing up the red balloons & begin to cross the frozen lake. The balloons begin to pop you fall onto the ice & broke though the ice. ";
                     vLabel.Text = "press m to continue";
                     options1.Image = null;
+                    options1.Text = "";
                     option2.Visible = false;
                     option3.Visible = false;
                     option4.Visible = false;
@@ -447,6 +450,7 @@ namespace ice_crossing_interactive_multchoice_story
                 case 12:
                     storyText.Text = "You eat the cheese & attempt to cross while eating the cheese. You began to chocke on the cheese.";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -459,6 +463,7 @@ namespace ice_crossing_interactive_multchoice_story
 
                     storyText.Text = "You have a special leaf that makes you into a tenuki suit for some reason & a mushroom that does nothing.";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -470,6 +475,7 @@ namespace ice_crossing_interactive_multchoice_story
                 case 14:
                     storyText.Text = "You attempt to use the mushroom with the kart thinking it must work like in mario kart or something. The car expolodes eventually.";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -481,6 +487,7 @@ namespace ice_crossing_interactive_multchoice_story
                 case 15:
                     storyText.Text = "you get 10 points for having a odd looking mushroom & you use a teleporter device to get across a frozen lake";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -492,6 +499,7 @@ namespace ice_crossing_interactive_multchoice_story
                 case 16:
                     storyText.Text = "You put on a bandana & box over your self & begin to cross the lake. You dont know where you are going so you just go in circles hopeing for the best.";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -503,6 +511,7 @@ namespace ice_crossing_interactive_multchoice_story
                 case 17:
                     storyText.Text = "You also have a drone in the box that dosent have any battery";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -514,6 +523,7 @@ namespace ice_crossing_interactive_multchoice_story
                 case 18:
                     storyText.Text = "inside the box was a cheat mode remote. You teleport yourself across the frozen lake.";
                     vLabel.Text = "press m to continue";
+                    options1.Text = "";
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -523,6 +533,7 @@ namespace ice_crossing_interactive_multchoice_story
                     nLabel.Visible = false;
                     break;
                 case 19:
+                    options1.Text = "";
                     itemPopUp.Image = null;
                     wind.Play();
                     storyText.Text = "game over";
@@ -532,6 +543,7 @@ namespace ice_crossing_interactive_multchoice_story
 
                     break;
                 case 20:
+                    options1.Text = "";
                     taDa.Play();
                     this.BackgroundImage = Properties.Resources.Frozen_lake;
                     storyText.Visible = true;
@@ -542,6 +554,7 @@ namespace ice_crossing_interactive_multchoice_story
                     nLabel.Text = "press n to exit game";
                     break;
                 case 21:
+                  
                     options1.Image = null;
                     option2.Visible = false;
                     option3.Visible = false;
@@ -581,12 +594,17 @@ namespace ice_crossing_interactive_multchoice_story
             if (personX > 1000)
             {
                 scene = 20;
+                this.BackgroundImage = Properties.Resources.Frozen_lake;
+                vLabel.Visible = true;
+                vLabel.Text = "press any button to continue";
                 gameCounter.Enabled = false;
+                
             }
             Refresh();
         }
 
         private void backGround_Paint(object sender, PaintEventArgs e)
+            //for when scene 21 trigers 
         {
             if (scene == 21)
             {
@@ -599,6 +617,7 @@ namespace ice_crossing_interactive_multchoice_story
 
         private void backGround_KeyUp(object sender, KeyEventArgs e)
         {
+            //controlls for w,s,a,d during scene 21
             switch (e.KeyCode)
             {
                 case Keys.W:
